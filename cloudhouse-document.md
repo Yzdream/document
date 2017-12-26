@@ -169,3 +169,40 @@
     "status": 10
 }
 ```
+
+### 3. 获取作品章节内容
+- ##### url
+  api/chapter
+- ##### 请求方式
+  POST
+  - ##### 请求参数
+  | 参数 | 类型   | 说明 |
+  | ---- | ------| ---- |
+  | type | int   | 请求数据类型 10：漫画、20：小说|
+  | uid	 | String| 请求用户ID|
+  | cid  | String| 章节ID|
+  | pid  | String| 作品ID，即小说ID或者漫画ID|
+- ##### 响应参数
+  | 小说参数  | 类型   | 说明                       |
+  |:--------- |:------ |:-------------------------- |
+  | content   | String | 章节内容                   |
+  | history   | int    | 用户阅读历史记录           |
+  | isFree    | int    | 内容是否收费 0:免费 1:收费 |
+  | name      | String | 章节名                   |
+  | price     | int    | 收费价格                   |
+  | words     | int    | 章节字数(对小说内容章节)    |
+  | url       | String  | 章节内容文件URL|
+
+  ``` json
+  {
+	"data": {
+		"content": "更靠着她的身子，不知道谈成了多少笔大生意。",
+		"history": 22,
+		"isFree": 0,
+		"name": "第376章 情侣",
+		"price": 0,
+		"words": 2010
+	},
+	"status": 10
+  }
+  ```
