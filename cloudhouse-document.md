@@ -23,6 +23,7 @@
 | ---- | ---- | ---- |
 | type | int  | URL参数 1：漫画、2：小说、 缺省：无数据    |
 - ##### 响应参数
+漫画
 | 参数     | 类型   | 说明                       |
 |:-------- |:------ |:-------------------------- |
 | id       | long   | 漫画ID                     |
@@ -42,6 +43,26 @@
 | mStatus  | String | 漫画上架状态               |
 | resType  | String | 资源类型  1：漫画、2：小说 |
 
+小说
+| 参数      | 类型   | 说明               |
+|:--------- |:------ |:------------------ |
+| id       | long   | 小说ID               		 |
+| fiType   | String | 小说类型                    |
+| fiTags   | String | 小说标签                    |
+| fiName   | String | 小说标题                   |
+| fiAuthor | String | 小说作者                   |
+| fiReward | long   | 小说打赏量                 |
+| fiFlat   | String | 小说横版封面URL             |
+| fiCover  | String | 小说封面URL 			   |
+| fiNum    | String | 小说字数		            |
+| fiJieshao| String | 小说简介                   |
+| fiCreate | long	| 发布时间                  |
+| fiUpdate | long   | 更新时间        		  |
+| fiHeat   | long   | 小说热度				  |
+| fiCoNum  | long   | 小说收藏量                 |
+| fiStatus | String | 小说上架状态               |
+| fiSource | String |	小说来源				 |
+| resType  | String | 资源类型  1：漫画、2：小说 |
   ``` json
   {
 	  "data":[{
@@ -68,18 +89,86 @@
 
 #### 2. App首页数据
 - ##### url
-  api/index
+  api/index/{type}
+  ```
+  api/index/1, api/index/2
+  ```
 - ##### 请求方式
   POST
-- ##### 请求参数
-  无
+  - ##### 请求参数 `(路径参数)`
+  | 参数 | 类型 | 说明 |
+  | ---- | ---- | ---- |
+  | type | int  | URL参数 1：漫画、2：小说、 缺省：无数据    |
 - ##### 响应参数
+  小说
   | 参数      | 类型   | 说明               |
   |:--------- |:------ |:------------------ |
+  | id       | long   | 小说ID               		 |
+  | fiType   | String | 小说类型                    |
+  | fiTags   | String | 小说标签                    |
+  | fiName   | String | 小说标题                   |
+  | fiAuthor | String | 小说作者                   |
+  | fiReward | long   | 小说打赏量                 |
+  | fiFlat   | String | 小说横版封面URL             |
+  | fiCover  | String | 小说封面URL 			   |
+  | fiNum    | String | 小说字数		            |
+  | fiJieshao| String | 小说简介                   |
+  | fiCreate | long	  | 发布时间                  |
+  | fiUpdate | long   | 更新时间        		  |
+  | fiHeat   | long   | 小说热度				  |
+  | fiCoNum  | long   | 小说收藏量                 |
+  | fiStatus | String | 小说上架状态               |
+  | fiSource | String |	小说来源				 |
+  | resType  | String | 资源类型  1：漫画、2：小说 |
 
+  漫画
+  | 参数      | 类型   | 说明               |
+  |:--------- |:------ |:------------------ |
+  | id       | long   | 漫画ID                     |
+  | mTxtAh   | String | 文作者                     |
+  | mImgAh   | String | 图作者                     |
+  | mAuthor  | String | 作者笔名                   |
+  | mName    | String | 漫画名称                   |
+  | mHear    | long   | 热度                       |
+  | mThumb   | String | 缩略图绝对路径             |
+  | mThumbB  | String | 缩略图相对路径             |
+  | mFlat    | String | 漫画横版图绝对路径         |
+  | mFlatB   | String | 漫画横版图相对路径         |
+  | mJieshao | String | 漫画简介                   |
+  | mNotice  | String | 漫画公告                   |
+  | mUptime  | String | 漫画更新时间说明           |
+  | mCoNum   | long   | 漫画收藏量                 |
+  | mStatus  | String | 漫画上架状态               |
+  | resType  | String | 资源类型  1：漫画、2：小说 |
 ``` json
-  {
-  	"status": 10,
-
-  }
+{
+    "data": [
+        {
+            "name": "收藏排行",
+            "list": [
+                {
+                    "fiType": "穿越幻想",
+                    "fiTags": "杀手，穿越重生，驱魔",
+                    "fiSource": "万众",
+                    "resType": "2",
+                    "fiUpdate": 2017,
+                    "fiReward": 0,
+                    "fiHeat": 1050,
+                    "fiFlat": "",
+                    "fiStatus": "已上架",
+                    "fiNum": 774464,
+                    "fiCreate": 2017,
+                    "fiName": "狂颜三小姐：风流驱魔师",
+                    "fiAuthor": "御赐毒药",
+                    "fiEnd": "1",
+                    "fiCover": "http://cdn.dolulu.com.cn/fiction/wz/1508396309273316635.jpg",
+                    "fiJieshao": "女人恨之入骨的妖精，男人趋之若鹜的毒药，她，堂堂顶级杀手竟命丧于缠绵游戏！一朝重生，她竟躺在一群无头丧尸中！尼玛！身处神魔异界，上有众妖缠身，下有群男夺心！那她顺从天意，化身为“魔”又如何？驱妖魔，驭神兽，泡美男，且看她现代女屌丝，如何生杀予夺，锋芒展露，仗剑天下……",
+                    "id": 42,
+                    "fiCoNum": 797
+                }
+            ]
+        }
+    ],
+    "status": 10
+}
 ```
