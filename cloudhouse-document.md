@@ -14,7 +14,7 @@
 - ##### url
   api/banner/{type}
   ```
-	api/banner/1, api/banner/2
+	例子： api/banner/1, api/banner/2
   ```
 - ##### 请求方式
   POST
@@ -23,9 +23,8 @@
 | ---- | ---- | ---- |
 | type | int  | URL参数 1：漫画、2：小说、 缺省：无数据    |
 - ##### 响应参数
-漫画
-| 参数     | 类型   | 说明                       |
-|:-------- |:------ |:-------------------------- |
+| 漫画参数  | 类型   | 说明                       |
+|:-------- |:------ |:--------------------------|
 | id       | long   | 漫画ID                     |
 | mTxtAh   | String | 文作者                     |
 | mImgAh   | String | 图作者                     |
@@ -43,26 +42,25 @@
 | mStatus  | String | 漫画上架状态               |
 | resType  | String | 资源类型  1：漫画、2：小说 |
 
-小说
-| 参数      | 类型   | 说明               |
-|:--------- |:------ |:------------------ |
-| id       | long   | 小说ID               		 |
-| fiType   | String | 小说类型                    |
-| fiTags   | String | 小说标签                    |
-| fiName   | String | 小说标题                   |
-| fiAuthor | String | 小说作者                   |
-| fiReward | long   | 小说打赏量                 |
-| fiFlat   | String | 小说横版封面URL             |
-| fiCover  | String | 小说封面URL 			   |
-| fiNum    | String | 小说字数		            |
-| fiJieshao| String | 小说简介                   |
-| fiCreate | long	| 发布时间                  |
-| fiUpdate | long   | 更新时间        		  |
-| fiHeat   | long   | 小说热度				  |
-| fiCoNum  | long   | 小说收藏量                 |
-| fiStatus | String | 小说上架状态               |
-| fiSource | String |	小说来源				 |
-| resType  | String | 资源类型  1：漫画、2：小说 |
+| 小说参数  | 类型   | 说明                       |
+|:--------- |:------ |:-------------------------- |
+| id        | long   | 小说ID                     |
+| fiType    | String | 小说类型                   |
+| fiTags    | String | 小说标签                   |
+| fiName    | String | 小说标题                   |
+| fiAuthor  | String | 小说作者                   |
+| fiReward  | long   | 小说打赏量                 |
+| fiFlat    | String | 小说横版封面URL            |
+| fiCover   | String | 小说封面URL                |
+| fiNum     | String | 小说字数                   |
+| fiJieshao | String | 小说简介                   |
+| fiCreate  | long   | 发布时间                   |
+| fiUpdate  | long   | 更新时间                   |
+| fiHeat    | long   | 小说热度                   |
+| fiCoNum   | long   | 小说收藏量                 |
+| fiStatus  | String | 小说上架状态               |
+| fiSource  | String | 小说来源                   |
+| resType   | String | 资源类型  1：漫画、2：小说 |
   ``` json
   {
 	  "data":[{
@@ -91,7 +89,7 @@
 - ##### url
   api/index/{type}
   ```
-  api/index/1, api/index/2
+  	例子：api/index/1, api/index/2
   ```
 - ##### 请求方式
   POST
@@ -100,9 +98,8 @@
   | ---- | ---- | ---- |
   | type | int  | URL参数 1：漫画、2：小说、 缺省：无数据    |
 - ##### 响应参数
-  小说
-  | 参数      | 类型   | 说明               |
-  |:--------- |:------ |:------------------ |
+  | 小说参数  | 类型   | 说明               		|
+  |:-------- |:------ |:--------------------------|
   | id       | long   | 小说ID               		 |
   | fiType   | String | 小说类型                    |
   | fiTags   | String | 小说标签                    |
@@ -121,9 +118,8 @@
   | fiSource | String |	小说来源				 |
   | resType  | String | 资源类型  1：漫画、2：小说 |
 
-  漫画
-  | 参数      | 类型   | 说明               |
-  |:--------- |:------ |:------------------ |
+  | 漫画参数   | 类型   | 说明               		|
+  |:---------|:------ |:---------------------------|
   | id       | long   | 漫画ID                     |
   | mTxtAh   | String | 文作者                     |
   | mImgAh   | String | 图作者                     |
@@ -140,6 +136,7 @@
   | mCoNum   | long   | 漫画收藏量                 |
   | mStatus  | String | 漫画上架状态               |
   | resType  | String | 资源类型  1：漫画、2：小说 |
+
 ``` json
 {
     "data": [
