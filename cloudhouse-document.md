@@ -278,7 +278,7 @@
 	}
     ```
 
-### 7. 用户注册
+### 7. 用户登录
 - ##### url
 	api/user/login
 - ##### 请求方式
@@ -291,28 +291,12 @@
 - ##### 响应参数
 	|     参数  | 类型    | 说明             |
 	|:--------- |:------ |:-----------------|
-	| uName		| String | 用户昵称		|
-	| uPhone	| String | 用户手机号|
-	| uAvatar	| String | 用户头像|
-	| uGold		| int	 | 用户拥有的金币数|
-	| uCountry  | String | 用户所在国家|
-	| uProvince | String | 省份	|
-	| uCity		| String | 城市	|
-	| createAt  | long   | 账号创建时间|
+	| status	| String | 用户昵称		|
+	| msg		| String | 注册结果信息|
 
     ``` json
-	正确JSON
 	{
-    "data": {
-        "uAvatar":"http://cdn.dolulu.com.cn/uploads/images/grtx.png",
-        "createAt": 1514353511000,
-        "uCity": "",
-        "uCountry": "",
-        "uGold": 0,
-        "uName": "残梦",
-        "uPhone": "17610069507",
-        "uProvince": "",
-    },
-    "status": 10
+		"msg": "完成注册",
+		"status": 10
 	}
     ```
