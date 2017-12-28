@@ -417,3 +417,41 @@
 	    "status": 10
 	}
     ```
+
+### 8. 用户重置密码
+- ##### url
+	api/user/info
+- ##### 请求方式
+	POST
+- ##### 请求参数
+	|   参数   | 类型   | 说明 |
+	| :--------| ------| ---- |
+	| account  | String| 用户账号(手机号) |
+- ##### 响应参数
+    | 参数      | 类型   | 说明                  |
+    |:--------- |:------ |:--------------------- |
+    | id        | long   | 用户                  |
+    | uAvatar   | String | 用户头像              |
+    | uName     | String | 用户昵称              |
+    | uPhone    | String | 用户手机号            |
+    | uIsAuthor | String | 是否是作者 0:否、1:是 |
+    | uCountry  | String | 国家                  |
+    | uCity     | String | 城市                  |
+    | uProvince | String | 省份                  |
+
+    ``` json
+	{
+	    "data": {
+	        "id": 1,
+	        "uAvatar": "",
+	        "uCity": "",
+	        "uCountry": "",
+	        "uGold": 4025,
+	        "uIsAuthor": "0",
+	        "uName": "Cloud59235125",
+	        "uPhone": "17788704650",
+	        "uProvince": ""
+	    },
+	    "status": 10
+	}
+    ```
