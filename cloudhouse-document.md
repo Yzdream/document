@@ -324,3 +324,86 @@
 		"status": 10
 	}
     ```
+
+### 9. 获取作品详情页信息
+- ##### url
+	api/work
+- ##### 请求方式
+	POST
+- ##### 请求参数
+	|   参数   | 类型   | 说明 |
+	| :--------| ------| ---- |
+	| uid	   | String| 用户手机号 |
+	| wType    | int   | 作品类型 10：漫画、20：小说|
+	| wId	   | String| 作品ID|
+- ##### 响应参数
+	|     参数  | 类型    | 说明             |
+	|:--------- |:------ |:-----------------|
+	| id        | int    | 作品ID |
+	| name		| String | 作品名			|
+	| author	| String | 作品作者			|
+	| category	| String | 分类|
+	| tags		| String | 标签|
+	| collection| long   | 收藏量|
+	| heat 	    | long   | 热度 |
+	| isEnd     | String | 是否完结|
+	| isFree    | String | 是否收费|
+	| reward    | long   | 打赏量|
+	| score     | String | 评分|
+	| totalScore| String | 总评分|
+	| summary   | String | 作品简介|
+	| reward.id | long   | 打赏记录ID|
+	| reward.uAvatar | String   | 打赏用户头像|
+ 	| reward.uGold | int | 打赏金额 |
+	| reward.uName | String | 打赏用户名 |
+	| comments.cNum| int | 评论回复数 |
+	| comments.coPraise| int | 评论点赞数|
+	| comments.coType| long | 评论作品的类型 f: 小说 m: 漫画|
+	| comments.createAt| long | 评论创建时间戳 |
+	| comments.id| long | 该评论的ID |
+	| comments.pId| int | 评论的作品的ID |
+	| comments.uId| long | 评论用户的Id |
+	| comments.uTouxiang| String | 评论用户头像 |
+
+    ``` json
+	{
+	    "data": {
+	        "work": {
+	            "author": "久鱼",
+	            "category": "现代都市",
+	            "collection": 1929,
+	            "heat": 8125,
+	            "id": 7,
+	            "isEnd": "未完结",
+	            "isFree": "收费",
+	            "name": "罪恶青春",
+	            "reward": 0,
+	            "score": "9.3",
+	            "summary": "辍学那年，我开启了自己的热血人生。夜场女王、公主萝莉、清纯学妹、黑道御姐一一找上门……",
+	            "tags": "罪恶,青春,久鱼,夜场",
+	            "totalScore": "0"
+	        },
+	        "reward": [
+	            {
+	                "id": 15,
+	                "uAvatar": "http://res.dolulu.com.cn/mobile/images/assets/touxiang.png",
+	                "uGold": 300,
+	                "uName": "烈艳-于洁"
+	            }
+	        ],
+	        "comments": [
+	            {
+	                "cNum": 0,
+	                "coPraise": 45,
+	                "coType": "f",
+	                "createAt": 1514438088000,
+	                "id": 1,
+	                "pId": 7,
+	                "uId": 16,
+	                "uTouxiang": "http://res.dolulu.com.cn/mobile/images/assets/touxiang.png"
+	            }
+	        ]
+	    },
+	    "status": 10
+	}
+    ```
