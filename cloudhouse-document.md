@@ -364,6 +364,9 @@
 	| comments.pId| int | 评论的作品的ID |
 	| comments.uId| long | 评论用户的Id |
 	| comments.uTouxiang| String | 评论用户头像 |
+	| like.id| int | 猜你喜欢的作品ID |
+	| like.name| String | 猜你喜欢的作品名称 |
+	| like.cover| String | 猜你喜欢的作品的封面 |
 
     ``` json
 	{
@@ -391,6 +394,13 @@
 	                "uName": "烈艳-于洁"
 	            }
 	        ],
+			"like": [
+			    {
+				    "cover": "http://cdn.dolulu.com.cn/fiction/wz/20160521225742_xum1tn.jpg",
+				    "id": 634,
+				    "name": "总裁爹地霸王攻",
+			    }
+		    ],
 	        "comments": [
 	            {
 	                "cNum": 0,
