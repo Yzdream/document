@@ -364,6 +364,9 @@
 	| comments.pId| int | 评论的作品的ID |
 	| comments.uId| long | 评论用户的Id |
 	| comments.uTouxiang| String | 评论用户头像 |
+	| comments.uName| String | 评论用户昵称 |
+	| comments.isReply| String | 当前查看用户是否评论过该条评论 0: 没有、1:有|
+	| comments.isLike| String | 当前查看用户是否点赞过该条评论  0: 没有、1:有|
 	| like.id| int | 猜你喜欢的作品ID |
 	| like.name| String | 猜你喜欢的作品名称 |
 	| like.cover| String | 猜你喜欢的作品的封面 |
@@ -403,6 +406,9 @@
 		    ],
 	        "comments": [
 	            {
+					"uName": "1",
+					"isLike": "1",
+					"isReply": "1",
 	                "cNum": 0,
 	                "coPraise": 45,
 	                "coType": "f",
@@ -418,7 +424,7 @@
 	}
     ```
 
-### 8. 用户重置密码
+### 8. 获取用户信息
 - ##### url
 	api/user/info
 - ##### 请求方式
