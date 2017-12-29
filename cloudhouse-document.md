@@ -481,14 +481,14 @@
     | name    | String | 章节名                  |
 	| order   | int    | 章节的自然顺序				|
     | isFree  | int    | 是否收费 0:免费、1:收费 |
-    | isPay   | int    | 是否付费 0:未支付、1:已支付|
+    | isPay   | int    | 是否付费 0:未支付、1:已支付、2：未登录用户|
 	| price   | int    | 收费价格				 |
     | history | String | 阅读记录                |
 
     ``` json
 	{
 	    "data": {
-	        "history": 12470,
+	        "history": "12470",
 	        "chapters": [
 	            {
 	                "id": 12582,
