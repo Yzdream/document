@@ -482,7 +482,7 @@
     | isFree  | int    | 是否收费 0:免费、1:收费 |
     | isPay   | int    | 是否付费 0:未支付、1:已支付|
 	| price   | int    | 收费价格				 |
-    | history | int    | 阅读记录                |
+    | history | String | 阅读记录                |
 
     ``` json
 	{
