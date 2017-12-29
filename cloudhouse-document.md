@@ -483,7 +483,6 @@
     | isPay   | int    | 是否付费 0:未支付、1:已支付|
 	| price   | int    | 收费价格				 |
     | history | int    | 阅读记录                |
-	| isLast  | String | 是否最后一页 0:否、1:是 |
 
     ``` json
     ```
