@@ -485,4 +485,19 @@
     | history | int    | 阅读记录                |
 
     ``` json
+	{
+	    "data": {
+	        "history": 12470,
+	        "chapters": [
+	            {
+	                "id": 12582,
+	                "isFree": 1,
+	                "isPay": 0,
+	                "name": "第361章   我缺一个新娘",
+	                "price": 39
+	            }
+	        ]
+	    },
+	    "status": 10
+	}
     ```
